@@ -1984,9 +1984,14 @@
 
 	.image {
 		border-radius: 0.35em;
-		border: 0;
+		border: solid 1px black;
 		display: inline-block;
 		position: relative;
+	}
+
+	.image:hover{
+		transition: border 0.5s;
+		border: solid 1px white;
 	}
 
 		.image:before {
@@ -2000,7 +2005,7 @@
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.5;
+			opacity: 0;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -2011,9 +2016,6 @@
 		}
 
 			.image.thumb:after {
-				-moz-transition: opacity 0.2s ease-in-out;
-				-webkit-transition: opacity 0.2s ease-in-out;
-				-ms-transition: opacity 0.2s ease-in-out;
 				transition: opacity 0.2s ease-in-out;
 				border-radius: 0.35em;
 				border: solid 3px rgba(255, 255, 255, 0.5);
@@ -2032,10 +2034,21 @@
 				text-decoration: none;
 				top: 50%;
 				white-space: nowrap;
+				cursor: pointer;
 			}
 
 			.image.thumb.git:after{
 				content:"Github"
+			}
+
+			a.site-link{
+				float: right;
+				border-bottom: none;
+				margin-left: 16px;
+			}
+
+			a.site-link:hover{
+				text-decoration: underline;
 			}
 
 			.image.thumb:hover:after {
@@ -2455,13 +2468,15 @@
 
 		.work-item h3 {
 			font-size: 1em;
-			margin: 0 0 0.5em 0;
+			margin: 0;
+			float:left;
 		}
 
 		.work-item p {
 			font-size: 0.8em;
 			line-height: 1.5em;
 			margin: 0;
+			float: left;
 		}
 
 /* Header */
