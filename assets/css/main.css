@@ -18,6 +18,17 @@
 		vertical-align: baseline;
 	}
 
+
+	.group{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	p.head-description{
+		font-size: 20px;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
